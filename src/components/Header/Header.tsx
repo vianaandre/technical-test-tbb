@@ -5,13 +5,16 @@ import { Container } from 'common/styles/container';
 import { Input } from 'components/Form/Input';
 import { Search } from 'components/Icons';
 import { theme } from 'common/styles/theme';
+import { useApp } from 'common/hooks/useApp';
 
 export const Header: React.FC = () => {
+	const { onSearchProduct, onSearchSubmit } = useApp();
+
 	return (
 		<ContainerHeader>
 			<Container>
 				<h1><strong>O que você</strong> está procurando?</h1>
-				<ContainerHeaderForm>
+				<ContainerHeaderForm onSubmit={onSearchSubmit}>
 					<Input 
 						name='search'
 						id='search'
@@ -21,6 +24,7 @@ export const Header: React.FC = () => {
 							icon: <Search width={32} height={32} color={theme.colors.PRIMARY.MAIN} />,
 							direction: 'right'
 						}}
+						onChange={(event) => onSearchProduct(event.target.value)}
 					/>
 				</ContainerHeaderForm>
 			</Container>

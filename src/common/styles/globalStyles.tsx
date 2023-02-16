@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
     *::-webkit-scrollbar {
-        width: 6px;
+        width: 0px;
         height: 8px;
     }
     /* Handle */

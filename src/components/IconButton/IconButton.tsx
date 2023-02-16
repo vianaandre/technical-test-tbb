@@ -3,9 +3,9 @@ import { IconButtonProps } from './interface';
 
 import { ContainerIconButton } from './styles';
 
-export const IconButton: React.FC<IconButtonProps> = ({ children }) => {
+export const IconButton: React.FC<IconButtonProps> = ({ children, ...rest }) => {
 	return (
-		<ContainerIconButton>
+		<ContainerIconButton {...rest}>
 			{children}
 		</ContainerIconButton>
 	);

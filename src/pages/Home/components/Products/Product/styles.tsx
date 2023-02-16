@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ContainerProduct = styled.li`
-    width: calc(100% / 3 - ${({ theme }) => theme.spacing(1.40)});
     display: flex;
     flex-direction: column;
     align-items: center;

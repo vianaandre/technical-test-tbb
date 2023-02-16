@@ -7,6 +7,10 @@ export const ContainerHeader = styled.header`
         display: flex;
         flex-direction: column;
         gap: ${({ theme }) => theme.spacing(6)};
+        @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+            padding-top: ${({ theme }) => theme.spacing(4)};
+            padding-bottom: ${({ theme }) => theme.spacing(4)};
+        }
         h1 {
             font-size: ${({ theme }) => theme.fonts.sizes[48]};
             font-family: ${({ theme }) => theme.fonts.family.PRIMARY};
@@ -18,6 +22,9 @@ export const ContainerHeader = styled.header`
                 font-weight: bold;
                 color: ${({ theme }) => theme.colors.TEXT.DARK};
             }
+            @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+                font-size: ${({ theme }) => theme.fonts.sizes[32]};
+            }
         }
     }
 `;
@@ -25,4 +32,7 @@ export const ContainerHeader = styled.header`
 export const ContainerHeaderForm = styled.form`
     width: 100%;
     max-width: 460px;
+    @media(max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+        max-width: 100%;
+    }
 `;

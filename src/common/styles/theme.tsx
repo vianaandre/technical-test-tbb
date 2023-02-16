@@ -12,7 +12,9 @@ export const theme = {
 			MAIN: '#2B2A30'
 		},
 		GREY: {
-			500: '#757575'
+			50: '#DFE1E2',
+			500: '#757575',
+			200: 'rgba(0, 0, 0, 0.25)'
 		}, 
 		WHITE: '#FFFFFF',
 		BLACK: '#000000'
