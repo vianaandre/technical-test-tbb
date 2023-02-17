@@ -14,5 +14,6 @@ export const ContainerEmpty = styled.div`
         font-style: normal;
         color: ${({ theme }) => theme.colors.GREY[200]};
         text-transform: uppercase;
+        text-align: center;
     }
 `;

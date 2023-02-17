@@ -8,7 +8,7 @@ export function useFetch<Data = unknown>(path: string) {
 		const { data } = await api.get(path) as { data: Data };
 		return data;
 	}, {
-		errorRetryCount: 1,
+		errorRetryCount: 0,
 		shouldRetryOnError: true,
 		errorRetryInterval: 300,
 	});

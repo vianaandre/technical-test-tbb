@@ -8,6 +8,7 @@ import { SkeletonComponent } from './Skeleton';
 import { Filter as FilterIcon, Close } from 'components/Icons';
 import { theme } from 'common/styles/theme';
 import { IconButton } from 'components/IconButton';
+import { Empty } from 'components/Empty';
 
 export const Filter: React.FC = () => {
 	const { categories, onFilterPerCategory, catgoriesSelected, loadingProducts } = useApp();
@@ -52,13 +53,18 @@ export const Filter: React.FC = () => {
 								))}
 							</SkeletonTheme>
 						)}
-						{!loadingProducts && categories.map(item => (
+						{!loadingProducts && categories.length > 0 && categories.map(item => (
 							<li key={item._id}>
 								<Checkbox name={item._id} id={item._id} label={item.name} value={item._id} onChange={(event) => {
 									onFilterPerCategory(event.target.value, catgoriesSelected);
 								}} />
 							</li>
 						))}
+						{!loadingProducts && categories.length <= 0 && (
+							<div className='empty'>
+								<Empty text="Nenhum filtro disponível" />
+							</div>
+						)}
 					</ul>
 					<footer>
 						<button type="button" onClick={() => setIsShowFilter(false)}>Feito</button>

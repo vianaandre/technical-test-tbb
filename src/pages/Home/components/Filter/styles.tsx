@@ -139,4 +139,8 @@ export const ContainerFilter = styled.div`
             }
         }
     }
+    div.empty {
+        height: 300px;
+        width: 100%;
+    }
 `;

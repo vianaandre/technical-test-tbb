@@ -4,6 +4,7 @@ import { CategoryProps } from 'common/interface/CategoryProps';
 import { ProductProps } from 'common/interface/ProductProps';
 import { FETCH_PRODUCTS } from 'services/routes';
 import { useFetch } from './useFetch';
+import { useToast } from './useToast';
 
 interface AppContextProps {
     categories: CategoryProps[];
@@ -22,6 +23,7 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 	const { data, error } = useFetch<{
         nodes: ProductProps[]
     }>(FETCH_PRODUCTS);
+	const { toast } = useToast();
 
 	const [ isCategories, setIsCategories ] = useState<CategoryProps[]>([]);
 	const [ isProducts, setIsProducts ] = useState<ProductProps[]>([]);
@@ -97,6 +99,10 @@ export const AppProvider: React.FC<{ children: React.ReactNode }> = ({ children 
 			handleFormattedProducts(data.nodes);
 		}
 		if(error) {
+			toast({
+				message: 'Ocorreu um erro de comunicação.', 
+				type: 'error'
+			});
 			setIsLoadingProducts(false);
 		}
 
