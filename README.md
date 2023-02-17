@@ -8,7 +8,10 @@
   yarn db
 ````
 ````
-  yarn dev
+  yarn build
+````
+````
+  yarn preview
 ````
 <hr />
 
