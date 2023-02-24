@@ -27,7 +27,7 @@
 
 ### Pastas
 **/common**
-> Irá conter os estilos globais, hooks, interfaces, mocks e assets e configs globais.
+> Irá conter os estilos globais, hooks, interfaces, mocks, assets e configs globais.
 
 **/components**
 > Está contendo todos os componentes que poderão ser reutilizável em diferentes lugares da aplicação.
