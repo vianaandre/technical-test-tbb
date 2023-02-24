@@ -20,7 +20,7 @@
  - Foi adicionado um **setTimeout** dentro do useEffect para criar um efeito de loading na tela e assim tornar a aplicação mais real
  - Foi criado um hook específico chamado **useFetch** para chamadas na **API** utilizando a lib **SWR**
  - Foi criado um hook específico chamado **useToast** para adicionar mensagem de toast para o usuário
- - Foi criado um **theme** para trazes uma melhor padronização nos estilos da aplicação 
+ - Foi criado um **theme** para trazer uma melhor padronização nos estilos da aplicação 
  - Foi implementado testes apenas para o componente de Checkbox com o intuito de mostrar a implementação de testes unitários
 
 <hr />
